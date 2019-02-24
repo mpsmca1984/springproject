@@ -34,9 +34,9 @@ stages{
        
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
        dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
-    	 sh 'javac Jenkintest.java'
+    	 sh 'pwd'
        dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src"
-       sh 'java springproject.Jenkintest'
+       sh 'pwd'
     }
     }
   }
