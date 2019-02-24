@@ -18,6 +18,25 @@ stages{
         ])
       }
     }
-   
+    stage('build'){
+    steps{
+      build 'pipelinetest'
+      }
+    }
+    stage('Test app'){
+    steps{
+      echo 'Testing is stated!'
+      }    
+    }
+    stage('Run'){
+    
+      steps{
+       echo 'Running!'
+    	sh 'cd /Users/mritunjaysingh/.jenkins/workspace/app-test/src/springproject'
+        sh 'javac Jenkintest.java'
+        sh  'cd ..'
+        sh 'java springproject.Jenkintest'
+    }
+    }
   }
 }
