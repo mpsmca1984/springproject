@@ -33,7 +33,7 @@ stages{
       steps{
        
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-       dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
+       echo "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
       }
     }
   }
