@@ -36,7 +36,7 @@ stages{
        echo "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
        sh  "javac ${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject/*.java"
        sh "cd ${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src"
-       sh "java -jar springproject.Jenkintest"
+       sh "java springproject.Jenkintest"
        }
     }
   }
