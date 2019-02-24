@@ -17,13 +17,13 @@ stages{
           ]
         ])
       }
-    },
+    }
     stage('build'){
       build 'pipelinetest'
-    },
+    }
     stage('Test app'){
       echo 'Testing is stated!'    
-    },
+    }
     stage('Run'){
      echo 'Running!'
       steps{
