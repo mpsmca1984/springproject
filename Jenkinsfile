@@ -33,9 +33,9 @@ stages{
       steps{
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
     	cd "/Users/mritunjaysingh/.jenkins/workspace/${env.JOB_NAME}/src/springproject"
-        javac Jenkintest.java
-        cd ..
-        java springproject.Jenkintest
+       sh 'javac Jenkintest.java'
+       sh 'cd ..'
+       sh 'java springproject.Jenkintest'
     }
     }
   }
