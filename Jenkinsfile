@@ -25,7 +25,7 @@ stages{
     }
     stage('Test app'){
     steps{
-      echo 'Testing is stated!'
+      echo 'Testing is stated! have to include'
       }    
     }
     stage('Run'){
