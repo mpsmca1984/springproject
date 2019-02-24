@@ -33,6 +33,7 @@ stages{
       steps{
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
     	sh "cd /Users/mritunjaysingh/.jenkins/workspace/${env.JOB_NAME}/src/springproject"
+        sh 'ls -al'
         sh 'javac Jenkintest.java'
         sh  'cd ..'
         sh 'java springproject.Jenkintest'
