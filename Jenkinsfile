@@ -20,7 +20,7 @@ stages{
     }
     stage('build'){
     steps{
-      build 'pipelinetest'
+      echo 'build is in progress'
       }
     }
     stage('Test app'){
