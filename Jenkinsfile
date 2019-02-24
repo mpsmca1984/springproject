@@ -33,11 +33,9 @@ stages{
       steps{
        
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-       def urls="/Users/mritunjaysingh/.jenkins/workspace/${env.JOB_NAME}/src/springproject"
-    	 def chdirr='cd $urls'
-       sh '$chdirr'
-       sh 'javac Jenkintest.java'
-       sh 'cd ..'
+       dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
+    	 sh 'javac Jenkintest.java'
+       dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src"
        sh 'java springproject.Jenkintest'
     }
     }
