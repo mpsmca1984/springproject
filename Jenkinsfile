@@ -34,7 +34,7 @@ stages{
        
        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
        dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src/springproject"
-    	 sh 'ls'
+    	 sh 'ls -al'
        dir "${env.JENKINS_HOME}/workspace/${env.JOB_NAME}/src"
        sh 'pwd'
     }
